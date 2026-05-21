@@ -1,0 +1,4 @@
+body { font-family: sans-serif; padding: 2rem; }
+.err-msg { color: red; font-size: 0.8rem; min-height: 1rem; display: block; }
+input.invalid { outline: 2px solid red; }
+.tip-btn.active { font-weight: bold; outline: 2px solid black; }

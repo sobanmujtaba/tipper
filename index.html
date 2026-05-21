@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip Calculator</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<main>
+  <h1>Tip Calculator</h1>
+  <section>
+    <div>
+      <label for="bill">Bill Amount (Rs)</label><br>
+      <input type="number" id="bill" placeholder="0" min="0" step="any"
+             inputmode="decimal" autocomplete="off" aria-describedby="bill-err" />
+      <span class="err-msg" id="bill-err" role="alert" aria-live="polite"></span>
+    </div>
+
+    <div>
+      <label>Tip Percentage</label><br>
+      <div role="group" aria-label="Tip percentage presets">
+        <button class="tip-btn" data-tip="10" type="button" aria-pressed="false">10%</button>
+        <button class="tip-btn" data-tip="15" type="button" aria-pressed="false">15%</button>
+        <button class="tip-btn" data-tip="20" type="button" aria-pressed="false">20%</button>
+        <input type="number" id="custom-tip" placeholder="Custom %" min="0" max="100" step="any"
+               inputmode="decimal" autocomplete="off" aria-label="Custom tip percentage"
+               aria-describedby="tip-err" />
+      </div>
+      <span class="err-msg" id="tip-err" role="alert" aria-live="polite"></span>
+    </div>
+
+    <div>
+      <label for="people">Number of People</label><br>
+      <input type="number" id="people" placeholder="1" min="1" step="1"
+             inputmode="numeric" autocomplete="off" aria-describedby="people-err" />
+      <span class="err-msg" id="people-err" role="alert" aria-live="polite"></span>
+    </div>
+
+    <button id="reset-btn" type="button">Reset</button>
+
+  </section>
+
+  <section aria-label="Calculation results" aria-live="polite">
+    <p>Tip Amount: <strong id="out-tip">Rs 0.00</strong></p>
+    <p>Grand Total: <strong id="out-total">Rs 0.00</strong></p>
+    <p>Per Person: <strong id="out-per-person">Rs 0.00</strong></p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
